@@ -55,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				EB328A4E2364271F003AC36E /* Info.plist */,
+				EB328A492364271F003AC36E /* Assets.xcassets */,
 				EB328A5723642944003AC36E /* Global */,
 				EB328A5823642951003AC36E /* Utilities */,
 				EB328A562364293A003AC36E /* Model */,
@@ -99,7 +100,6 @@
 		EB328A5823642951003AC36E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				EB328A492364271F003AC36E /* Assets.xcassets */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
