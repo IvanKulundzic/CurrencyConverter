@@ -23,5 +23,3 @@ struct Currency: Codable {
         case sellingRate = "selling_rate"
     }
 }
-
-

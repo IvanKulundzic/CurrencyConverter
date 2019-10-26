@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -17,29 +17,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yYs-Ma-6nU">
-                                <rect key="frame" x="0.0" y="64.5" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="64.666666666666686" width="414" height="216"/>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dxD-14-Whp">
-                                <rect key="frame" x="0.0" y="361.5" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="361.66666666666669" width="414" height="216.00000000000006"/>
                                 <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ss5-Lq-aK4">
-                                <rect key="frame" x="0.0" y="592.5" width="414" height="150"/>
+                                <rect key="frame" x="0.0" y="592.66666666666663" width="414" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="fgR-Jb-7X6"/>
+                                    <constraint firstAttribute="height" constant="150" id="56K-70-i6R"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a currency you wish to convert from" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65G-pm-mAE">
-                                <rect key="frame" x="43" y="44" width="328" height="20.5"/>
+                                <rect key="frame" x="43" y="44" width="328" height="20.666666666666671"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a currency you wish to convert to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNu-pl-4Op">
-                                <rect key="frame" x="54" y="340.5" width="307" height="21"/>
+                                <rect key="frame" x="54" y="340.66666666666669" width="307" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -59,22 +59,22 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PNu-pl-4Op" secondAttribute="trailing" constant="53" id="0SL-GU-Xc1"/>
-                            <constraint firstItem="Ss5-Lq-aK4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1Ev-jQ-JeN"/>
                             <constraint firstItem="dxD-14-Whp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="52q-Ha-ezv"/>
-                            <constraint firstItem="Ss5-Lq-aK4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8qm-LI-Tvv"/>
                             <constraint firstItem="WJd-Cj-W0x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BH4-4v-VDw"/>
+                            <constraint firstItem="Ss5-Lq-aK4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JhK-ng-9QR"/>
                             <constraint firstItem="PNu-pl-4Op" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="KTb-iR-eaT"/>
                             <constraint firstItem="dxD-14-Whp" firstAttribute="top" secondItem="PNu-pl-4Op" secondAttribute="bottom" id="Ne4-nN-2hn"/>
                             <constraint firstItem="WJd-Cj-W0x" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="NmN-YK-sjA"/>
                             <constraint firstItem="yYs-Ma-6nU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PTB-nA-Vmf"/>
                             <constraint firstItem="PNu-pl-4Op" firstAttribute="top" secondItem="yYs-Ma-6nU" secondAttribute="bottom" constant="60" id="TTn-6y-mlF"/>
                             <constraint firstItem="65G-pm-mAE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="43" id="Tmj-2F-OVH"/>
-                            <constraint firstItem="Ss5-Lq-aK4" firstAttribute="top" secondItem="dxD-14-Whp" secondAttribute="bottom" constant="15" id="UNI-ej-JaH"/>
                             <constraint firstItem="65G-pm-mAE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UP6-OV-ylP"/>
                             <constraint firstItem="dxD-14-Whp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UWQ-Fa-otu"/>
                             <constraint firstItem="yYs-Ma-6nU" firstAttribute="top" secondItem="65G-pm-mAE" secondAttribute="bottom" id="WIQ-XB-Jz2"/>
                             <constraint firstItem="yYs-Ma-6nU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Za8-56-u0O"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="65G-pm-mAE" secondAttribute="trailing" constant="43" id="dGQ-oD-Ofo"/>
+                            <constraint firstItem="Ss5-Lq-aK4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o7y-O9-RVI"/>
+                            <constraint firstItem="Ss5-Lq-aK4" firstAttribute="top" secondItem="dxD-14-Whp" secondAttribute="bottom" constant="15" id="zne-Vh-dI3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
@@ -91,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+            <point key="canvasLocation" x="130.40000000000001" y="138.0809595202399"/>
         </scene>
     </scenes>
 </document>

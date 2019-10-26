@@ -12,12 +12,15 @@ typealias Action = () -> Void
 
 class HomeView: UIView {
     var actionHandler: Action?
-    @IBOutlet weak var currencyFromLabel: UILabel!
-    @IBOutlet weak var currencyToLabel: UILabel!
     @IBOutlet weak var currencyFromPicker: UIPickerView!
     @IBOutlet weak var currencyToPicker: UIPickerView!
     @IBOutlet weak var resultLabel: UILabel!
-        
+    @IBOutlet private weak var currencyFromLabel: UILabel!
+    @IBOutlet private weak var currencyToLabel: UILabel!
+}
+
+// MARK: - Submit button tapped
+extension HomeView {
     @IBAction func submitButtonTapped(_ sender: UIButton) {
         actionHandler?()
     }
