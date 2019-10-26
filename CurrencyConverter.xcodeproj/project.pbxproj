@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EB328A412364271D003AC36E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB328A402364271D003AC36E /* AppDelegate.swift */; };
-		EB328A432364271D003AC36E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB328A422364271D003AC36E /* SceneDelegate.swift */; };
 		EB328A452364271D003AC36E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB328A442364271D003AC36E /* ViewController.swift */; };
 		EB328A482364271D003AC36E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB328A462364271D003AC36E /* Main.storyboard */; };
 		EB328A4A2364271F003AC36E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB328A492364271F003AC36E /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		EB328A3D2364271D003AC36E /* CurrencyConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB328A402364271D003AC36E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EB328A422364271D003AC36E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EB328A442364271D003AC36E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EB328A472364271D003AC36E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB328A492364271F003AC36E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				EB328A402364271D003AC36E /* AppDelegate.swift */,
-				EB328A422364271D003AC36E /* SceneDelegate.swift */,
 				EB328A442364271D003AC36E /* ViewController.swift */,
 				EB328A462364271D003AC36E /* Main.storyboard */,
 				EB328A492364271F003AC36E /* Assets.xcassets */,
@@ -140,7 +137,6 @@
 			files = (
 				EB328A452364271D003AC36E /* ViewController.swift in Sources */,
 				EB328A412364271D003AC36E /* AppDelegate.swift in Sources */,
-				EB328A432364271D003AC36E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +283,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PWKM3YW36B;
 				INFOPLIST_FILE = CurrencyConverter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +302,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PWKM3YW36B;
 				INFOPLIST_FILE = CurrencyConverter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
