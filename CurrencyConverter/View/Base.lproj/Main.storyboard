@@ -8,11 +8,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="HomeView" customModule="CurrencyConverter" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -53,6 +53,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="pcY-WV-X30"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -76,7 +79,17 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="65G-pm-mAE" secondAttribute="trailing" constant="43" id="dGQ-oD-Ofo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outlet property="currencyFromLabel" destination="65G-pm-mAE" id="dnh-7F-p0F"/>
+                            <outlet property="currencyFromPicker" destination="yYs-Ma-6nU" id="wQr-Du-gpF"/>
+                            <outlet property="currencyToLabel" destination="PNu-pl-4Op" id="5Sh-BW-slu"/>
+                            <outlet property="currencyToPicker" destination="dxD-14-Whp" id="WBu-SL-XjY"/>
+                            <outlet property="resultLabel" destination="Ss5-Lq-aK4" id="glc-Rg-4Sj"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="homeView" destination="8bC-Xf-vdC" id="pl5-6L-0ff"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
