@@ -13,8 +13,8 @@ final class HomeView: UIView {
   private lazy var topLabel = UILabel()
   private lazy var midLabel = UILabel()
   private lazy var resultLabel = UILabel()
-  private lazy var currencyFromPicker = UIPickerView()
-  private lazy var currencyToPicker = UIPickerView()
+  private(set) lazy var currencyFromPicker = UIPickerView()
+  private(set) lazy var currencyToPicker = UIPickerView()
   private lazy var submitButton = UIButton()
   
   override init(frame: CGRect) {

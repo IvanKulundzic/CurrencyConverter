@@ -54,6 +54,12 @@ private extension HomeViewController {
   }
 }
 
+private extension HomeViewController {
+  func setupPickerViewDataSource() {
+    homeView.currencyFromPicker.dataSource = homeViewModel
+  }
+}
+
 
 //// MARK: - PickerView delegate
 //extension HomeViewController: UIPickerViewDelegate {
