@@ -12,15 +12,5 @@ struct JsonParser {
   func parseJson<T: Codable>(data: Data) throws -> T {
     let decoder = JSONDecoder()
     return try decoder.decode(T.self, from: data)
-    
-//    do {
-//      let jsonObject = try decoder.decode(T.self, from: data)
-//      json = jsonObject
-//      
-//    } catch {
-//      print("Error parsing JSON: ", error)
-//    }
-//    return json
-////    return try decoder.decode(T.self, from: data)
   }
 }

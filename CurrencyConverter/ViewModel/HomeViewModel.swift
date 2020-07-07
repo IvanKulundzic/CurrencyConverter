@@ -10,23 +10,25 @@ import Foundation
 
 final class HomeViewModel: NSObject {
   var homeViewModelAction: Action?
-  var currency: [Currency]? {
+  var currencies: [Currency]? {
     didSet {
+        debugPrint(currencyCode)
         homeViewModelAction?()      
     }
   }
   
-  init(currency: [Currency]? = nil) {
-    self.currency = currency
+  init(currencies: [Currency]? = nil) {
+    self.currencies = currencies
   }
 }
 
 // MARK: - viewModel properties
-//extension HomeViewModel {
-//  var currencyCode: String? {
-//    return currency
-//  }
-//}
+extension HomeViewModel {
+  var currencyCode: String? {
+//    print(currencies?.first)
+    return currencies?.first?.currencyCode
+  }
+}
 
 // MARK: - get currency data
 /// method does an API call, parses the response and sets the viewModel variable currency
@@ -35,10 +37,10 @@ extension HomeViewModel {
     let networkingManager = NetworkingManager()
     let urlToUse = "http://hnbex.eu/api/v1/rates/daily/"
     if let url = URL(string: urlToUse) {
-      networkingManager.getApiData(url: url) { [weak self] (currency) in
-        print("json: \(currency)")
-        self?.currency = currency
-//        print("ViewModel currency object: ", self?.currency)
+      networkingManager.getApiData(url: url) { [weak self] (currencies: [Currency]) in
+//        print("json: \(currencies)")
+        self?.currencies = currencies
+//        print("ViewModel currency object: ", self?.currencies)
       }
     }
   }

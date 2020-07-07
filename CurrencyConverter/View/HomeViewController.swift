@@ -27,13 +27,13 @@ private extension HomeViewController {
   /// Main caller method to for handling all action handlers
   func handleActions() {
     homeViewSubmitButtonTapped()
+    homeViewModelAction()
   }
   /// HomeView submit button tapped action
   func homeViewSubmitButtonTapped() {
     homeView.actionHandler = { [weak self] in
-      print("Submit button tapped")
+      debugPrint("Submit button tapped")
       self?.homeViewModel.getCurrencyCoversionRates()
-      print("VM currency: ", self?.homeViewModel.currency)
     }
   }
   /// HomeViewModel action that is called when homeViewModel variable currency is set
@@ -41,6 +41,7 @@ private extension HomeViewController {
   func homeViewModelAction() {
     homeViewModel.homeViewModelAction = { [weak self] in
       self?.updateUI()
+      print("1")
     }
   }
 }
@@ -48,7 +49,8 @@ private extension HomeViewController {
 // MARK: - update homeView UI with model data
 private extension HomeViewController {
   func updateUI() {
-//    homeView.result = homeViewModel.currencyCode
+    homeView.result = homeViewModel.currencyCode
+    print("2")
   }
 }
 
