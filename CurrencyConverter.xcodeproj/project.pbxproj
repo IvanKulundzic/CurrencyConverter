@@ -14,6 +14,8 @@
 		EB328A5A23642C80003AC36E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB328A5923642C80003AC36E /* HomeView.swift */; };
 		EB328A5C236435A1003AC36E /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB328A5B236435A1003AC36E /* Currency.swift */; };
 		EB328A5E2364893F003AC36E /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB328A5D2364893F003AC36E /* NetworkingManager.swift */; };
+		EBED006E24B4F8AE001C3FD5 /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED006D24B4F8AE001C3FD5 /* TypeAlias.swift */; };
+		EBED007124B4F937001C3FD5 /* NSLayoutConstraint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED007024B4F937001C3FD5 /* NSLayoutConstraint+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		EB328A5923642C80003AC36E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EB328A5B236435A1003AC36E /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		EB328A5D2364893F003AC36E /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		EBED006D24B4F8AE001C3FD5 /* TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
+		EBED007024B4F937001C3FD5 /* NSLayoutConstraint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +49,9 @@
 				EB328A3F2364271D003AC36E /* CurrencyConverter */,
 				EB328A3E2364271D003AC36E /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		EB328A3E2364271D003AC36E /* Products */ = {
 			isa = PBXGroup;
@@ -58,6 +64,7 @@
 		EB328A3F2364271D003AC36E /* CurrencyConverter */ = {
 			isa = PBXGroup;
 			children = (
+				EBED006F24B4F920001C3FD5 /* Extensions */,
 				EBED006B24B4F6F4001C3FD5 /* Networking */,
 				EB328A4E2364271F003AC36E /* Info.plist */,
 				EB328A492364271F003AC36E /* Assets.xcassets */,
@@ -91,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				EB328A402364271D003AC36E /* AppDelegate.swift */,
+				EBED006D24B4F8AE001C3FD5 /* TypeAlias.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -108,6 +116,14 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EBED006F24B4F920001C3FD5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EBED007024B4F937001C3FD5 /* NSLayoutConstraint+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +196,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBED006E24B4F8AE001C3FD5 /* TypeAlias.swift in Sources */,
+				EBED007124B4F937001C3FD5 /* NSLayoutConstraint+Extension.swift in Sources */,
 				EB328A5C236435A1003AC36E /* Currency.swift in Sources */,
 				EB328A5A23642C80003AC36E /* HomeView.swift in Sources */,
 				EB328A452364271D003AC36E /* HomeViewController.swift in Sources */,
@@ -323,7 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PWKM3YW36B;
 				INFOPLIST_FILE = CurrencyConverter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,7 +349,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ivankulundzic.CurrencyConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -342,7 +360,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PWKM3YW36B;
 				INFOPLIST_FILE = CurrencyConverter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -350,7 +368,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ivankulundzic.CurrencyConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

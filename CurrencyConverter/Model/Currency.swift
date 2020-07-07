@@ -9,17 +9,9 @@
 import Foundation
 
 struct Currency: Codable {
-    let code: String
-    let unitValue: Int
-    let buyingRate: String
-    let medianRate: String
-    let sellingRate: String
-    
-    enum CodingKeys: String, CodingKey {
-        case code = "currency_code"
-        case unitValue = "unit_value"
-        case buyingRate = "buying_rate"
-        case medianRate = "median_rate"
-        case sellingRate = "selling_rate"
-    }
+  let buyingRate: String
+  let currencyCode: String
+  let medianRate: String
+  let sellingRate: String
+  let unitValue: Int
 }
