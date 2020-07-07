@@ -16,9 +16,21 @@ final class HomeViewController: UIViewController {
     view = homeView
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+//    super.viewWillAppear(true)
+    
+    homeView.activityIndicator.startAnimating()
+    setupPickersViewDataSourceAndDelegate()
+    homeViewModel.getCurrencyCoversionRates()
+    //homeView.currencyToPicker.reloadAllComponents()
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+//    setupPickersViewDataSourceAndDelegate()
+//    homeViewModel.getCurrencyCoversionRates()
     handleActions()
+    
   }
 }
 
@@ -50,15 +62,33 @@ private extension HomeViewController {
 private extension HomeViewController {
   func updateUI() {
     homeView.result = homeViewModel.currencyCode
+    homeView.currencyFromPicker.reloadAllComponents()
+    homeView.currencyToPicker.reloadAllComponents()
+    homeView.activityIndicator.stopAnimating()
     print("2")
   }
 }
 
+// MARK: - add viewModel as data source and delegate for the pickers
 private extension HomeViewController {
-  func setupPickerViewDataSource() {
+  func setupPickersViewDataSourceAndDelegate() {
     homeView.currencyFromPicker.dataSource = homeViewModel
+    homeView.currencyFromPicker.delegate = homeViewModel
+    homeView.currencyToPicker.dataSource = homeViewModel
+    homeView.currencyToPicker.delegate = homeViewModel
   }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 //// MARK: - PickerView delegate

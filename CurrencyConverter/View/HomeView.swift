@@ -15,6 +15,7 @@ final class HomeView: UIView {
   private lazy var resultLabel = UILabel()
   private(set) lazy var currencyFromPicker = UIPickerView()
   private(set) lazy var currencyToPicker = UIPickerView()
+  private(set) lazy var activityIndicator = UIActivityIndicatorView()
   private lazy var submitButton = UIButton()
   
   override init(frame: CGRect) {
@@ -47,6 +48,7 @@ private extension HomeView {
     setupCurrencyToPicker()
     setupResultLabel()
     setupSubmitButton()
+    setupActivityIndicator()
   }
   
   func setupTopLabel() {
@@ -73,7 +75,7 @@ private extension HomeView {
       currencyFromPicker.heightAnchor.constraint(equalToConstant: 200)
     ]
     NSLayoutConstraint.useAndActivateConstraints(constraints: currencyFromPickerConstraints)
-    currencyFromPicker.backgroundColor = .blue
+    currencyFromPicker.backgroundColor = .clear
   }
   
   func setupMidLabel() {
@@ -100,7 +102,7 @@ private extension HomeView {
       currencyToPicker.heightAnchor.constraint(equalToConstant: 200)
     ]
     NSLayoutConstraint.useAndActivateConstraints(constraints: currencyToPickerConstraints)
-    currencyToPicker.backgroundColor = .blue
+    currencyToPicker.backgroundColor = .clear
   }
   
   func setupResultLabel() {
@@ -131,6 +133,18 @@ private extension HomeView {
     submitButton.setTitle("Submit", for: .normal)
     
     submitButton.addTarget(self, action: #selector(submitButtonTapped), for: .touchUpInside)
+  }
+  
+  func setupActivityIndicator() {
+    addSubview(activityIndicator)
+    let activityIndicatorConstraints = [
+      activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
+      activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor),
+      activityIndicator.heightAnchor.constraint(equalToConstant: 30),
+      activityIndicator.widthAnchor.constraint(equalToConstant: 30)
+    ]
+    NSLayoutConstraint.useAndActivateConstraints(constraints: activityIndicatorConstraints)
+    activityIndicator.style = .whiteLarge
   }
 }
 

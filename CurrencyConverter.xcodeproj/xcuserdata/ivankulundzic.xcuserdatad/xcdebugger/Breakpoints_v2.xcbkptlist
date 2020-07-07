@@ -14,8 +14,8 @@
             filePath = "CurrencyConverter/View/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "updateUI()"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,10 +30,42 @@
             filePath = "CurrencyConverter/View/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "homeViewModelAction()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9CD746D9-8D63-43E9-8A5B-2EF483201840 - 95a59146e418fb8b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CurrencyConverter.HomeViewController.(homeViewModelAction in _BDD14A360F981995D21A984B8A919A59)() -&gt; ()"
+                  moduleName = "CurrencyConverter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivankulundzic/Desktop/CurrencyConverter/CurrencyConverter/View/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  uuid = "9CD746D9-8D63-43E9-8A5B-2EF483201840 - 7d274da7ed057f40"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in CurrencyConverter.HomeViewController.(homeViewModelAction in _BDD14A360F981995D21A984B8A919A59)() -&gt; ()"
+                  moduleName = "CurrencyConverter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivankulundzic/Desktop/CurrencyConverter/CurrencyConverter/View/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -46,8 +78,8 @@
             filePath = "CurrencyConverter/View/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "homeViewModelAction()"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +94,8 @@
             filePath = "CurrencyConverter/View/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "homeViewSubmitButtonTapped()"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +110,8 @@
             filePath = "CurrencyConverter/View/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "homeViewSubmitButtonTapped()"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,42 +126,10 @@
             filePath = "CurrencyConverter/ViewModel/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "getCurrencyCoversionRates()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "685B2D69-0142-4450-A80A-BFD5EC761FFC - 74b5d88b0c18a915"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CurrencyConverter.HomeViewModel.getCurrencyCoversionRates() -&gt; ()"
-                  moduleName = "CurrencyConverter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ivankulundzic/Desktop/CurrencyConverter/CurrencyConverter/ViewModel/HomeViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "411">
-               </Location>
-               <Location
-                  uuid = "685B2D69-0142-4450-A80A-BFD5EC761FFC - ce56ba3e0549c031"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;CurrencyConverter.Currency&gt;) -&gt; () in CurrencyConverter.HomeViewModel.getCurrencyCoversionRates() -&gt; ()"
-                  moduleName = "CurrencyConverter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ivankulundzic/Desktop/CurrencyConverter/CurrencyConverter/ViewModel/HomeViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "88">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -142,10 +142,42 @@
             filePath = "CurrencyConverter/ViewModel/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "getCurrencyCoversionRates()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DCD09004-F8A6-447C-8084-AB4A43514E80 - 74b5d88b0c18a915"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CurrencyConverter.HomeViewModel.getCurrencyCoversionRates() -&gt; ()"
+                  moduleName = "CurrencyConverter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivankulundzic/Desktop/CurrencyConverter/CurrencyConverter/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "411">
+               </Location>
+               <Location
+                  uuid = "DCD09004-F8A6-447C-8084-AB4A43514E80 - ce56ba3e0549c031"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;CurrencyConverter.Currency&gt;) -&gt; () in CurrencyConverter.HomeViewModel.getCurrencyCoversionRates() -&gt; ()"
+                  moduleName = "CurrencyConverter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivankulundzic/Desktop/CurrencyConverter/CurrencyConverter/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -194,6 +226,22 @@
             endingLineNumber = "23"
             landmarkName = "getApiData(url:completion:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E45C930D-5537-4E87-98FD-E2A1B32D6294"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CurrencyConverter/View/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "HomeView"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

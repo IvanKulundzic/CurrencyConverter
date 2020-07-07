@@ -50,12 +50,16 @@ extension HomeViewModel: UIPickerViewDataSource {
   }
   
   func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-    5
+    //print("Currencies count: ", currencies?.count)
+    return currencies?.count ?? 5
   }
-  
+}
+
+extension HomeViewModel: UIPickerViewDelegate {
   func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-    "CRO"
-  
-    
+    //      pickerDataSource[row]
+    //currencyCode
+    currencies?[row].currencyCode
+    //    print(row)
   }
 }
