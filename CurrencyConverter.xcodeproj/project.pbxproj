@@ -16,6 +16,7 @@
 		EB328A5E2364893F003AC36E /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB328A5D2364893F003AC36E /* NetworkingManager.swift */; };
 		EBED006E24B4F8AE001C3FD5 /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED006D24B4F8AE001C3FD5 /* TypeAlias.swift */; };
 		EBED007124B4F937001C3FD5 /* NSLayoutConstraint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED007024B4F937001C3FD5 /* NSLayoutConstraint+Extension.swift */; };
+		EBED007324B503D8001C3FD5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED007224B503D8001C3FD5 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		EB328A5D2364893F003AC36E /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		EBED006D24B4F8AE001C3FD5 /* TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
 		EBED007024B4F937001C3FD5 /* NSLayoutConstraint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Extension.swift"; sourceTree = "<group>"; };
+		EBED007224B503D8001C3FD5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		EBED006C24B4F70D001C3FD5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EBED007224B503D8001C3FD5 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				EBED006E24B4F8AE001C3FD5 /* TypeAlias.swift in Sources */,
 				EBED007124B4F937001C3FD5 /* NSLayoutConstraint+Extension.swift in Sources */,
 				EB328A5C236435A1003AC36E /* Currency.swift in Sources */,
+				EBED007324B503D8001C3FD5 /* HomeViewModel.swift in Sources */,
 				EB328A5A23642C80003AC36E /* HomeView.swift in Sources */,
 				EB328A452364271D003AC36E /* HomeViewController.swift in Sources */,
 				EB328A412364271D003AC36E /* AppDelegate.swift in Sources */,

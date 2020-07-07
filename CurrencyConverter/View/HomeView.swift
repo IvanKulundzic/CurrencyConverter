@@ -27,8 +27,18 @@ final class HomeView: UIView {
   }
 }
 
+// MARK: - view properties
+/// exposing view properties in order to update the UI based on viewModel data
+extension HomeView {
+  var result: String? {
+    get { resultLabel.text }
+    set { resultLabel.text = newValue }
+  }
+}
+
 // MARK: - setup view
 private extension HomeView {
+  /// Main setup method that is used as a method caller for all other UI components setup methods
   func setupView() {
     backgroundColor = .white
     setupTopLabel()
@@ -128,6 +138,5 @@ private extension HomeView {
 extension HomeView {
   @objc func submitButtonTapped() {
     actionHandler?()
-    debugPrint(submitButton)
   }
 }

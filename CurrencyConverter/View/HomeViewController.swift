@@ -17,10 +17,18 @@ final class HomeViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    homeViewSubmitButtonTapped()
   }
 }
 
-private extension HomeViewController
+private extension HomeViewController {
+  func homeViewSubmitButtonTapped() {
+    homeView.actionHandler = { [weak self] in
+      print("Submit button tapped")
+      
+    }
+  }
+}
 
 //// MARK: - PickerView delegate
 //extension HomeViewController: UIPickerViewDelegate {
