@@ -26,10 +26,10 @@ class HomeViewController: UIViewController {
 // MARK: - PickerView delegate
 extension HomeViewController: UIPickerViewDelegate {
     func declareHomeViewDelegatesAndDataSource() {
-        homeView.currencyFromPicker.delegate = self
-        homeView.currencyToPicker.delegate = self
-        homeView.currencyFromPicker.dataSource = self
-        homeView.currencyToPicker.dataSource = self
+//        homeView.currencyFromPicker.delegate = self
+//        homeView.currencyToPicker.delegate = self
+//        homeView.currencyFromPicker.dataSource = self
+//        homeView.currencyToPicker.dataSource = self
     }
 }
 
