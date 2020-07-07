@@ -10,6 +10,7 @@ import UIKit
 
 final class HomeViewController: UIViewController {
   private lazy var homeView = HomeView()
+  private let homeViewModel = HomeViewModel()
   
   override func loadView() {
     view = homeView
@@ -17,18 +18,40 @@ final class HomeViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    homeViewSubmitButtonTapped()
+    handleActions()
   }
 }
 
+// MARK: - handle actions
 private extension HomeViewController {
+  /// Main caller method to for handling all action handlers
+  func handleActions() {
+    homeViewSubmitButtonTapped()
+  }
+  /// HomeView submit button tapped action
   func homeViewSubmitButtonTapped() {
     homeView.actionHandler = { [weak self] in
       print("Submit button tapped")
-      
+      self?.homeViewModel.getCurrencyCoversionRates()
+      print("VM currency: ", self?.homeViewModel.currency)
+    }
+  }
+  /// HomeViewModel action that is called when homeViewModel variable currency is set
+  /// This method calls the updateUI method in order to update the homeView UI based on viewModel data
+  func homeViewModelAction() {
+    homeViewModel.homeViewModelAction = { [weak self] in
+      self?.updateUI()
     }
   }
 }
+
+// MARK: - update homeView UI with model data
+private extension HomeViewController {
+  func updateUI() {
+//    homeView.result = homeViewModel.currencyCode
+  }
+}
+
 
 //// MARK: - PickerView delegate
 //extension HomeViewController: UIPickerViewDelegate {

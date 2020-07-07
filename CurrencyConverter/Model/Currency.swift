@@ -14,4 +14,12 @@ struct Currency: Codable {
   let medianRate: String
   let sellingRate: String
   let unitValue: Int
+  
+  enum CodingKeys: String, CodingKey {
+    case buyingRate = "buying_rate"
+    case currencyCode = "currency_code"
+    case medianRate = "median_rate"
+    case sellingRate = "selling_rate"
+    case unitValue = "unit_value"
+  }
 }

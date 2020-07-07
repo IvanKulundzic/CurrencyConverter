@@ -8,23 +8,22 @@
 
 import Foundation
 
-class NetworkingManager {
-  func getCurrencyData(completion: @escaping (([Currency]) -> Void)) {
-    guard let url = URL(string: "http://hnbex.eu/api/v1/rates/daily") else { return }
-    let request = URLRequest(url:url)
-    URLSession.shared.dataTask(with: request) {[weak self] data, response, error in
+final class NetworkingManager {
+  func getApiData<T: Codable>(url: URL, completion: @escaping (T) -> Void) {
+    let request = URLRequest(url: url)
+    URLSession.shared.dataTask(with: request) { data, response, error in
       DispatchQueue.main.async {
         if let error = error {
-          print("Failed to get data from url:", error)
+          print("Failed to get data from url: ", error)
           return
         }
         guard let data = data else { return }
         do {
-          let decoder = JSONDecoder()
-          let jsonObject = try decoder.decode([Currency].self, from: data)
-          completion(jsonObject)
+          let object: T = try JsonParser().parseJson(data: data)
+//          print("Object1: ", object)
+          completion(object)
         } catch {
-          print("Error parsing JSON: \(error)")
+          print("Error parsing JSON: ", error)
         }
       }
     }.resume()

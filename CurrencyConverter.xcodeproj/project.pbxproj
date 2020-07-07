@@ -17,6 +17,7 @@
 		EBED006E24B4F8AE001C3FD5 /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED006D24B4F8AE001C3FD5 /* TypeAlias.swift */; };
 		EBED007124B4F937001C3FD5 /* NSLayoutConstraint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED007024B4F937001C3FD5 /* NSLayoutConstraint+Extension.swift */; };
 		EBED007324B503D8001C3FD5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED007224B503D8001C3FD5 /* HomeViewModel.swift */; };
+		EBED007624B504EA001C3FD5 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED007524B504EA001C3FD5 /* JSONParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		EBED006D24B4F8AE001C3FD5 /* TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
 		EBED007024B4F937001C3FD5 /* NSLayoutConstraint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Extension.swift"; sourceTree = "<group>"; };
 		EBED007224B503D8001C3FD5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		EBED007524B504EA001C3FD5 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				EBED006F24B4F920001C3FD5 /* Extensions */,
+				EBED007424B504D0001C3FD5 /* JSON Parsing */,
 				EBED006B24B4F6F4001C3FD5 /* Networking */,
 				EB328A4E2364271F003AC36E /* Info.plist */,
 				EB328A492364271F003AC36E /* Assets.xcassets */,
@@ -127,6 +130,14 @@
 				EBED007024B4F937001C3FD5 /* NSLayoutConstraint+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EBED007424B504D0001C3FD5 /* JSON Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				EBED007524B504EA001C3FD5 /* JSONParser.swift */,
+			);
+			path = "JSON Parsing";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +212,7 @@
 			files = (
 				EBED006E24B4F8AE001C3FD5 /* TypeAlias.swift in Sources */,
 				EBED007124B4F937001C3FD5 /* NSLayoutConstraint+Extension.swift in Sources */,
+				EBED007624B504EA001C3FD5 /* JSONParser.swift in Sources */,
 				EB328A5C236435A1003AC36E /* Currency.swift in Sources */,
 				EBED007324B503D8001C3FD5 /* HomeViewModel.swift in Sources */,
 				EB328A5A23642C80003AC36E /* HomeView.swift in Sources */,
