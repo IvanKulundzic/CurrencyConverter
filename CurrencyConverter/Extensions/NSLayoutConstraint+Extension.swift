@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-// MARK: - activate constraints and set translatesAutoresizingMaskIntoConstraints to false with each new UIView
+/// Activate constraints and set translatesAutoresizingMaskIntoConstraints to false with each new UIView
 extension NSLayoutConstraint {
   public class func useAndActivateConstraints(constraints: [NSLayoutConstraint]) {
     for constraint in constraints {

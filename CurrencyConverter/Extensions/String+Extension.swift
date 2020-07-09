@@ -7,9 +7,9 @@
 //
 
 import Foundation
-
+/// Convinience method to convert a string to double
 extension String {
-    func toDouble() -> Double? {
-        return NumberFormatter().number(from: self)?.doubleValue
-    }
+  func toDouble() -> Double? {
+    return NumberFormatter().number(from: self)?.doubleValue
+  }
 }

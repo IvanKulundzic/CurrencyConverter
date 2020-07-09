@@ -29,7 +29,7 @@ final class HomeView: UIView {
 }
 
 // MARK: - view properties
-/// exposing view properties in order to update the UI based on viewModel data
+/// Exposing view properties in order to update the UI based on viewModel data
 extension HomeView {
   var result: String? {
     get { resultLabel.text }

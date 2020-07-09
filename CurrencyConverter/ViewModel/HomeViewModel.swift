@@ -28,7 +28,7 @@ final class HomeViewModel: NSObject {
 // MARK: - viewModel properties
 extension HomeViewModel {
   var currencyCode: String? {
-    return currencies?.first?.currencyCode
+    currencies?.first?.currencyCode
   }
 }
 
@@ -54,7 +54,7 @@ extension HomeViewModel: UIPickerViewDataSource {
   }
   
   func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-    return currencies?.count ?? 10
+    currencies?.count ?? 10
   }
 }
 
