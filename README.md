@@ -14,3 +14,4 @@ Among others, this app shows a use of the following skills:
 - JSON parsing
 - use of closures as action and completion handlers
 - use of generics
+- use of extensions to add functionality to existing types and as a tool to speed up the UI building process
