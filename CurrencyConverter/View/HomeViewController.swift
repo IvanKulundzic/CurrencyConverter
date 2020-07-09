@@ -20,12 +20,11 @@ final class HomeViewController: UIViewController {
     homeView.activityIndicator.startAnimating()
     setupPickersViewDataSourceAndDelegate()
     homeViewModel.getCurrencyCoversionRates()
-    homeView.activityIndicator.startAnimating()
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    homeView.activityIndicator.startAnimating()
+    homeView.activityIndicator.stopAnimating()
     handleActions()
   }
 }
