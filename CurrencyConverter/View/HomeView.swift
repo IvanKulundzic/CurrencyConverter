@@ -10,12 +10,12 @@ import UIKit
 
 final class HomeView: UIView {
   var actionHandler: Action?
+  private(set) lazy var currencyFromPicker = UIPickerView.pickerView()
+  private(set) lazy var currencyToPicker = UIPickerView.pickerView()
+  private(set) lazy var activityIndicator = UIActivityIndicatorView()
   private lazy var topLabel = UILabel()
   private lazy var midLabel = UILabel()
   private lazy var resultLabel = UILabel()
-  private(set) lazy var currencyFromPicker = UIPickerView()
-  private(set) lazy var currencyToPicker = UIPickerView()
-  private(set) lazy var activityIndicator = UIActivityIndicatorView()
   private lazy var submitButton = UIButton.submitButton()
   
   override init(frame: CGRect) {
@@ -34,6 +34,13 @@ extension HomeView {
   var result: String? {
     get { resultLabel.text }
     set { resultLabel.text = newValue }
+  }
+}
+
+// MARK: - submit button tapped
+extension HomeView {
+  @objc func submitButtonTapped() {
+    actionHandler?()
   }
 }
 
@@ -57,7 +64,7 @@ private extension HomeView {
       topLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
       topLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 10),
       topLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -10),
-      topLabel.heightAnchor.constraint(equalToConstant: 60)
+      topLabel.heightAnchor.constraint(equalToConstant: 50)
     ]
     NSLayoutConstraint.useAndActivateConstraints(constraints: topLabelConstraints)
     topLabel.backgroundColor = .clear
@@ -69,13 +76,12 @@ private extension HomeView {
   func setupCurrencyFromPicker() {
     addSubview(currencyFromPicker)
     let currencyFromPickerConstraints = [
-      currencyFromPicker.topAnchor.constraint(equalTo: topLabel.bottomAnchor, constant: 2),
-      currencyFromPicker.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
-      currencyFromPicker.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
+      currencyFromPicker.topAnchor.constraint(equalTo: topLabel.bottomAnchor, constant: 1),
+      currencyFromPicker.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 30),
+      currencyFromPicker.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -30),
       currencyFromPicker.heightAnchor.constraint(equalToConstant: 200)
     ]
     NSLayoutConstraint.useAndActivateConstraints(constraints: currencyFromPickerConstraints)
-    currencyFromPicker.backgroundColor = .clear
   }
   
   func setupMidLabel() {
@@ -84,7 +90,7 @@ private extension HomeView {
       midLabel.topAnchor.constraint(equalTo: currencyFromPicker.bottomAnchor, constant: 5),
       midLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
       midLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
-      midLabel.heightAnchor.constraint(equalToConstant: 60)
+      midLabel.heightAnchor.constraint(equalToConstant: 50)
     ]
     NSLayoutConstraint.useAndActivateConstraints(constraints: midLabelConstraints)
     midLabel.backgroundColor = .clear
@@ -96,28 +102,30 @@ private extension HomeView {
   func setupCurrencyToPicker() {
     addSubview(currencyToPicker)
     let currencyToPickerConstraints = [
-      currencyToPicker.topAnchor.constraint(equalTo: midLabel.bottomAnchor, constant: 2),
-      currencyToPicker.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
-      currencyToPicker.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
+      currencyToPicker.topAnchor.constraint(equalTo: midLabel.bottomAnchor, constant: 1),
+      currencyToPicker.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 30),
+      currencyToPicker.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -30),
       currencyToPicker.heightAnchor.constraint(equalToConstant: 200)
     ]
     NSLayoutConstraint.useAndActivateConstraints(constraints: currencyToPickerConstraints)
-    currencyToPicker.backgroundColor = .clear
   }
   
   func setupResultLabel() {
     addSubview(resultLabel)
     let resultLabelConstraints = [
       resultLabel.topAnchor.constraint(equalTo: currencyToPicker.bottomAnchor, constant: 10),
-      resultLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
-      resultLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
+      resultLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 30),
+      resultLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -30),
       resultLabel.heightAnchor.constraint(equalToConstant: 100)
     ]
     NSLayoutConstraint.useAndActivateConstraints(constraints: resultLabelConstraints)
-    resultLabel.backgroundColor = .red
-    resultLabel.text = "Result label"
+    resultLabel.backgroundColor = .clear
     resultLabel.textAlignment = .center
-    resultLabel.font = UIFont.systemFont(ofSize: 20)
+    resultLabel.font = UIFont.systemFont(ofSize: 25)
+    
+    resultLabel.layer.borderWidth = 1.0
+    resultLabel.layer.borderColor = UIColor.systemGray.cgColor
+    resultLabel.layer.cornerRadius = 20.0
   }
   
   func setupSubmitButton() {
@@ -144,12 +152,5 @@ private extension HomeView {
     ]
     NSLayoutConstraint.useAndActivateConstraints(constraints: activityIndicatorConstraints)
     activityIndicator.style = .whiteLarge
-  }
-}
-
-// MARK: - submit button tapped
-extension HomeView {
-  @objc func submitButtonTapped() {
-    actionHandler?()
   }
 }

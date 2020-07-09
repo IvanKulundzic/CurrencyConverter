@@ -9,7 +9,7 @@
 import Foundation
 
 final class NetworkingManager {
-  func getApiData<T: Codable>(url: URL, completion: @escaping (T) -> Void) {
+  func getApiData<T: Codable>(url: URL, completion: @escaping CompletionHandler<T>) {
     let request = URLRequest(url: url)
     URLSession.shared.dataTask(with: request) { data, response, error in
       DispatchQueue.main.async {
@@ -19,8 +19,7 @@ final class NetworkingManager {
         }
         guard let data = data else { return }
         do {
-          let object: T = try JsonParser().parseJson(data: data)
-//          print("Object1: ", object)
+          let object: T = try JsonParser().parseJson(data: data)//
           completion(object)
         } catch {
           print("Error parsing JSON: ", error)

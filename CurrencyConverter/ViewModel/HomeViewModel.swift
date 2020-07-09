@@ -71,8 +71,8 @@ extension HomeViewModel {
       let currencyToUnit = currencyTo?.unitValue
     else { return }
     
-    let resultToUse = (currencyFromRate / currencyToRate).rounded(toPlaces: 6)
-    let resultString = "\(currencyFromUnit) \(currencyFromCode) = \(resultToUse) \(currencyToCode)"
+    let conversionResult = ((currencyFromRate / currencyToRate) * Double(currencyToUnit)).rounded(toPlaces: 6)
+    let resultString = "\(currencyFromUnit) \(currencyFromCode) = \(conversionResult) \(currencyToCode)"
     result = resultString
   }
 }

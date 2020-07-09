@@ -7,5 +7,7 @@
 //
 
 import Foundation
-/// Communication action handler
-typealias Action = () -> Void
+/// Communication action handler - i.e. button tapped
+public typealias Action = () -> Void
+/// Completion handler that takes a generic parameter - i.e. networking closure
+public typealias CompletionHandler<T> = (T) -> Void

@@ -17,7 +17,7 @@ extension UIButton {
     button.setTitle("Submit", for: .normal)
     //button.layer.cornerRadius = button.frame.height / 2
     /// Add shadow to the button
-    button.layer.shadowOffset = .init(width: 0, height: 0)
+    button.layer.shadowOffset = .zero
     button.layer.shadowRadius = 5.0
     button.layer.shadowColor = UIColor.black.cgColor
     button.layer.shadowOpacity = 0.8
