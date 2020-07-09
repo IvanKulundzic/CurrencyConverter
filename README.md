@@ -1,3 +1,5 @@
+### CurrencyConverter
+
 A demo currency converter application, mainly used as a showcase of skill for a job application/interested employers.
 
 This converter app does what it's name suggests - it converts one currency to another, using a public API.
