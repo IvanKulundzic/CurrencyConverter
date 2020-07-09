@@ -13,10 +13,12 @@ final class HomeViewModel: NSObject {
   var homeViewModelAction: Action?
   var currencies: [Currency]? {
     didSet {
-        debugPrint(currencyCode)
         homeViewModelAction?()      
     }
   }
+  var currencyFrom: Currency?
+  var currencyTo: Currency?
+  var result: String?
   
   init(currencies: [Currency]? = nil) {
     self.currencies = currencies
@@ -44,22 +46,33 @@ extension HomeViewModel {
   }
 }
 
+// MARK: - viewModel is the pickerView(s) data source
+/// Both pickers share the same data, thus not differentiating them
 extension HomeViewModel: UIPickerViewDataSource {
   func numberOfComponents(in pickerView: UIPickerView) -> Int {
     1
   }
   
   func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-    //print("Currencies count: ", currencies?.count)
-    return currencies?.count ?? 5
+    return currencies?.count ?? 10
   }
 }
 
-extension HomeViewModel: UIPickerViewDelegate {
-  func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-    //      pickerDataSource[row]
-    //currencyCode
-    currencies?[row].currencyCode
-    //    print(row)
+// MARK: - method for calculating conversion rates
+/// Method uses selected currencies (from - to) and calculates the conversion from selected to desired currency
+extension HomeViewModel {
+  func calculateRates() {
+    guard
+      let currencyFromCode = currencyFrom?.currencyCode,
+      let currencyToCode = currencyTo?.currencyCode,
+      let currencyFromRate = currencyFrom?.sellingRate.toDouble(),
+      let currencyToRate = currencyTo?.buyingRate.toDouble(),
+      let currencyFromUnit = currencyFrom?.unitValue,
+      let currencyToUnit = currencyTo?.unitValue
+    else { return }
+    
+    let resultToUse = (currencyFromRate / currencyToRate).rounded(toPlaces: 6)
+    let resultString = "\(currencyFromUnit) \(currencyFromCode) = \(resultToUse) \(currencyToCode)"
+    result = resultString
   }
 }

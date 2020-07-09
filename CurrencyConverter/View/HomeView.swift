@@ -16,7 +16,7 @@ final class HomeView: UIView {
   private(set) lazy var currencyFromPicker = UIPickerView()
   private(set) lazy var currencyToPicker = UIPickerView()
   private(set) lazy var activityIndicator = UIActivityIndicatorView()
-  private lazy var submitButton = UIButton()
+  private lazy var submitButton = UIButton.submitButton()
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -129,9 +129,8 @@ private extension HomeView {
       submitButton.widthAnchor.constraint(equalToConstant: 100)
     ]
     NSLayoutConstraint.useAndActivateConstraints(constraints: submitButtonConstraints)
-    submitButton.backgroundColor = .systemPink
-    submitButton.setTitle("Submit", for: .normal)
     
+    submitButton.layer.cornerRadius = 20
     submitButton.addTarget(self, action: #selector(submitButtonTapped), for: .touchUpInside)
   }
   

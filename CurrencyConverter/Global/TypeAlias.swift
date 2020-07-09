@@ -7,5 +7,5 @@
 //
 
 import Foundation
-
+/// Communication action handler
 typealias Action = () -> Void

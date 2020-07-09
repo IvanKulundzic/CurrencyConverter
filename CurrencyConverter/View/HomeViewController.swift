@@ -17,20 +17,32 @@ final class HomeViewController: UIViewController {
   }
   
   override func viewWillAppear(_ animated: Bool) {
-//    super.viewWillAppear(true)
-    
     homeView.activityIndicator.startAnimating()
     setupPickersViewDataSourceAndDelegate()
     homeViewModel.getCurrencyCoversionRates()
-    //homeView.currencyToPicker.reloadAllComponents()
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
-//    setupPickersViewDataSourceAndDelegate()
-//    homeViewModel.getCurrencyCoversionRates()
     handleActions()
-    
+  }
+}
+
+extension HomeViewController: UIPickerViewDelegate {
+  func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    if pickerView == homeView.currencyFromPicker {
+      if let currencyFrom = homeViewModel.currencies?[row] {
+        homeViewModel.currencyFrom = currencyFrom
+      }
+    } else if pickerView == homeView.currencyToPicker {
+      if let currencyTo = homeViewModel.currencies?[row] {
+        homeViewModel.currencyTo = currencyTo
+      }
+    }
+  }
+  
+  func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    homeViewModel.currencies?[row].currencyCode
   }
 }
 
@@ -44,8 +56,8 @@ private extension HomeViewController {
   /// HomeView submit button tapped action
   func homeViewSubmitButtonTapped() {
     homeView.actionHandler = { [weak self] in
-      debugPrint("Submit button tapped")
-      self?.homeViewModel.getCurrencyCoversionRates()
+      self?.homeViewModel.calculateRates()
+      self?.updateUI()
     }
   }
   /// HomeViewModel action that is called when homeViewModel variable currency is set
@@ -53,7 +65,6 @@ private extension HomeViewController {
   func homeViewModelAction() {
     homeViewModel.homeViewModelAction = { [weak self] in
       self?.updateUI()
-      print("1")
     }
   }
 }
@@ -61,11 +72,10 @@ private extension HomeViewController {
 // MARK: - update homeView UI with model data
 private extension HomeViewController {
   func updateUI() {
-    homeView.result = homeViewModel.currencyCode
+    homeView.result = homeViewModel.result
     homeView.currencyFromPicker.reloadAllComponents()
     homeView.currencyToPicker.reloadAllComponents()
     homeView.activityIndicator.stopAnimating()
-    print("2")
   }
 }
 
@@ -73,9 +83,9 @@ private extension HomeViewController {
 private extension HomeViewController {
   func setupPickersViewDataSourceAndDelegate() {
     homeView.currencyFromPicker.dataSource = homeViewModel
-    homeView.currencyFromPicker.delegate = homeViewModel
+    homeView.currencyFromPicker.delegate = self
     homeView.currencyToPicker.dataSource = homeViewModel
-    homeView.currencyToPicker.delegate = homeViewModel
+    homeView.currencyToPicker.delegate = self
   }
 }
 
