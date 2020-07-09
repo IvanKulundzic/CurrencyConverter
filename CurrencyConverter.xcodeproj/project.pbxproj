@@ -37,7 +37,6 @@
 		EBE8F69E24B7057B004303F0 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		EBE8F6A024B70A54004303F0 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		EBE8F6A224B71C6B004303F0 /* UIPickerView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPickerView+extension.swift"; sourceTree = "<group>"; };
-		EBE8F6AD24B74673004303F0 /* screenRecording.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = screenRecording.mov; sourceTree = "<group>"; };
 		EBED006D24B4F8AE001C3FD5 /* TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
 		EBED007024B4F937001C3FD5 /* NSLayoutConstraint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Extension.swift"; sourceTree = "<group>"; };
 		EBED007224B503D8001C3FD5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -85,7 +84,6 @@
 				EBED007424B504D0001C3FD5 /* JSON Parsing */,
 				EBED006F24B4F920001C3FD5 /* Extensions */,
 				EBE8F6A424B73AFA004303F0 /* Resources */,
-				EBE8F6AD24B74673004303F0 /* screenRecording.mov */,
 			);
 			path = CurrencyConverter;
 			sourceTree = "<group>";
@@ -121,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				EBE8F6A524B73B41004303F0 /* Assets */,
-				EBE8F6AA24B7443B004303F0 /* Recordings */,
 				EBE8F6A624B73B4D004303F0 /* Other */,
 			);
 			path = Resources;
@@ -141,13 +138,6 @@
 				EB328A4E2364271F003AC36E /* Info.plist */,
 			);
 			path = Other;
-			sourceTree = "<group>";
-		};
-		EBE8F6AA24B7443B004303F0 /* Recordings */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Recordings;
 			sourceTree = "<group>";
 		};
 		EBED006B24B4F6F4001C3FD5 /* Networking */ = {
