@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 struct Currency: Codable {
   let buyingRate: String
