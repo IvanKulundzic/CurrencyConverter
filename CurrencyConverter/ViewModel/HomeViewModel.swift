@@ -14,7 +14,8 @@ final class HomeViewModel: NSObject {
   var homeViewModelAction: Action?
   var currencies: [Currency]? {
     didSet {
-        homeViewModelAction?()      
+        homeViewModelAction?()
+        createPList()
     }
   }
   var currencyFrom: Currency?
@@ -27,11 +28,11 @@ final class HomeViewModel: NSObject {
 }
 
 // MARK: - viewModel properties
-extension HomeViewModel {
-  var currencyCode: String? {
-    currencies?.first?.currencyCode
-  }
-}
+//extension HomeViewModel {
+//  var currencyCode: String? {
+//    currencies?.first?.currencyCode
+//  }
+//}
 
 // MARK: - get currency data
 /// method does an API call, parses the response and sets the viewModel variable currency
@@ -42,6 +43,8 @@ extension HomeViewModel {
     if let url = URL(string: urlToUse) {
       networkingManager.getApiData(url: url) { [weak self] (currencies: [Currency]) in
         self?.currencies = currencies
+        print("1. Count: \(String(describing: self?.currencies?.count))")
+        //print("2. Currencies codes: \(self?.currencyCode)")
       }
     }
   }
@@ -75,5 +78,23 @@ extension HomeViewModel {
     let conversionResult = ((currencyFromRate / currencyToRate) * Double(currencyToUnit)).rounded(toPlaces: 6)
     let resultString = "\(currencyFromUnit) \(currencyFromCode) = \(conversionResult) \(currencyToCode)"
     result = resultString
+  }
+}
+
+// MARK: - create plist for testing purposes
+extension HomeViewModel {
+  func createPList() {
+    let encoder = PropertyListEncoder()
+    encoder.outputFormat = .xml
+    let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("Currencies.plist")
+    do {
+      let data = try encoder.encode(currencies)
+      print("2. Data:", data)
+      try data.write(to: path)
+      print("3. Path: \(path)")
+    } catch {
+      print(error)
+    }
+    print(#function)
   }
 }

@@ -14,8 +14,9 @@
 		EB328A5A23642C80003AC36E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB328A5923642C80003AC36E /* HomeView.swift */; };
 		EB328A5C236435A1003AC36E /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB328A5B236435A1003AC36E /* Currency.swift */; };
 		EB328A5E2364893F003AC36E /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB328A5D2364893F003AC36E /* NetworkingManager.swift */; };
+		EB46BB4C24BEE38C004A023B /* Currencies.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB46BB4B24BEE38C004A023B /* Currencies.plist */; };
 		EBCDCE2724BA3A7200CF3F88 /* Currency.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EBCDCE2524BA3A7200CF3F88 /* Currency.xcdatamodeld */; };
-		EBCDCE2F24BDE7B100CF3F88 /* CurrencyConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCDCE2E24BDE7B100CF3F88 /* CurrencyConverterTests.swift */; };
+		EBCDCE2F24BDE7B100CF3F88 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCDCE2E24BDE7B100CF3F88 /* HomeViewModelTests.swift */; };
 		EBCDCE3724BDED1900CF3F88 /* MockAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCDCE3624BDED1900CF3F88 /* MockAPIService.swift */; };
 		EBE8F69F24B7057B004303F0 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE8F69E24B7057B004303F0 /* String+Extension.swift */; };
 		EBE8F6A124B70A54004303F0 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE8F6A024B70A54004303F0 /* Double+Extension.swift */; };
@@ -47,9 +48,10 @@
 		EB328A5923642C80003AC36E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EB328A5B236435A1003AC36E /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		EB328A5D2364893F003AC36E /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		EB46BB4B24BEE38C004A023B /* Currencies.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Currencies.plist; sourceTree = "<group>"; };
 		EBCDCE2624BA3A7200CF3F88 /* Currency.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Currency.xcdatamodel; sourceTree = "<group>"; };
 		EBCDCE2C24BDE7B100CF3F88 /* CurrencyConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EBCDCE2E24BDE7B100CF3F88 /* CurrencyConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterTests.swift; sourceTree = "<group>"; };
+		EBCDCE2E24BDE7B100CF3F88 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		EBCDCE3024BDE7B100CF3F88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBCDCE3624BDED1900CF3F88 /* MockAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIService.swift; sourceTree = "<group>"; };
 		EBE8F69E24B7057B004303F0 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -143,11 +145,20 @@
 			path = Global;
 			sourceTree = "<group>";
 		};
+		EB46BB4824BEDF5E004A023B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB46BB4B24BEE38C004A023B /* Currencies.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		EBCDCE2D24BDE7B100CF3F88 /* CurrencyConverterTests */ = {
 			isa = PBXGroup;
 			children = (
-				EBCDCE2E24BDE7B100CF3F88 /* CurrencyConverterTests.swift */,
 				EBCDCE3024BDE7B100CF3F88 /* Info.plist */,
+				EB46BB4824BEDF5E004A023B /* Supporting Files */,
+				EBCDCE2E24BDE7B100CF3F88 /* HomeViewModelTests.swift */,
 				EBCDCE3624BDED1900CF3F88 /* MockAPIService.swift */,
 			);
 			path = CurrencyConverterTests;
@@ -304,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB46BB4C24BEE38C004A023B /* Currencies.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBCDCE3724BDED1900CF3F88 /* MockAPIService.swift in Sources */,
-				EBCDCE2F24BDE7B100CF3F88 /* CurrencyConverterTests.swift in Sources */,
+				EBCDCE2F24BDE7B100CF3F88 /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

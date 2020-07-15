@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-struct Currency: Codable {
+struct Currency: Codable, Equatable {
   let buyingRate: String
   let currencyCode: String
   let medianRate: String
