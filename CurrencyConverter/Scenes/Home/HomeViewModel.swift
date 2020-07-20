@@ -8,45 +8,81 @@
 
 import Foundation
 import UIKit
-import CoreData
 
-final class HomeViewModel: NSObject {
-  var homeViewModelAction: Action?
-  var currencies: [Currency]? {
+protocol HomeViewModelProtocol: UIPickerViewDataSource {
+  var currencies: [Currency] { get }
+  var currencyFrom: Currency? { get set }
+  var currencyTo: Currency? { get set }
+  var result: String? { get set }
+  var currenciesChangedHandler: Action? { get set }
+  var resultChangedHandler: TypedAction<String?>? { get set }
+  var isLoadingChangedHandler: TypedAction<Bool>? { get set }
+  func getCurrencyCoversionRates()
+  func calculateRates()
+}
+
+final class HomeViewModel: NSObject, HomeViewModelProtocol {
+  var currenciesChangedHandler: Action?
+  var resultChangedHandler: TypedAction<String?>?
+  var isLoadingChangedHandler: TypedAction<Bool>?
+  
+  var currencies: [Currency] {
     didSet {
-        homeViewModelAction?()
+        currenciesChangedHandler?()
         createPList()
     }
   }
+  
+  var result: String? {
+    didSet {
+      resultChangedHandler?(result)
+    }
+  }
+  
   var currencyFrom: Currency?
   var currencyTo: Currency?
-  var result: String?
   
-  init(currencies: [Currency]? = nil) {
+  init(currencies: [Currency] = []) {
     self.currencies = currencies
   }
 }
-
-// MARK: - viewModel properties
-//extension HomeViewModel {
-//  var currencyCode: String? {
-//    currencies?.first?.currencyCode
-//  }
-//}
 
 // MARK: - get currency data
 /// method does an API call, parses the response and sets the viewModel variable currency
 extension HomeViewModel {
   func getCurrencyCoversionRates() {
+    isLoadingChangedHandler?(true)
+    
     let networkingManager = NetworkingManager()
     let urlToUse = "http://hnbex.eu/api/v1/rates/daily/"
     if let url = URL(string: urlToUse) {
-      networkingManager.getApiData(url: url) { [weak self] (currencies: [Currency]) in
-        self?.currencies = currencies
-        print("1. Count: \(String(describing: self?.currencies?.count))")
-        //print("2. Currencies codes: \(self?.currencyCode)")
+      networkingManager.getApiData(url: url) { [weak self] (result: Result<[Currency], Error>) in
+        switch result {
+        case .success(let currencies):
+          self?.currencies = currencies
+        case .failure(let error):
+          print(error.localizedDescription)
+        }
+        self?.isLoadingChangedHandler?(false)
       }
     }
+  }
+  
+  func calculateRates() {
+    guard
+      let currencyFromCode = currencyFrom?.currencyCode,
+      let currencyToCode = currencyTo?.currencyCode,
+      let currencyFromRate = currencyFrom?.sellingRate.toDouble(),
+      let currencyToRate = currencyTo?.buyingRate.toDouble(),
+      let currencyFromUnit = currencyFrom?.unitValue,
+      let currencyToUnit = currencyTo?.unitValue
+    else {
+      return
+    }
+    
+    let conversionResult = ((currencyFromRate / currencyToRate) * Double(currencyToUnit)).rounded(toPlaces: 6)
+    let resultString = "\(currencyFromUnit) \(currencyFromCode) = \(conversionResult) \(currencyToCode)"
+    result = resultString
   }
 }
 
@@ -58,26 +94,7 @@ extension HomeViewModel: UIPickerViewDataSource {
   }
   
   func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-    currencies?.count ?? 10
-  }
-}
-
-// MARK: - method for calculating conversion rates
-/// Method uses selected currencies (from - to) and calculates the conversion from selected to desired currency
-extension HomeViewModel {
-  func calculateRates() {
-    guard
-      let currencyFromCode = currencyFrom?.currencyCode,
-      let currencyToCode = currencyTo?.currencyCode,
-      let currencyFromRate = currencyFrom?.sellingRate.toDouble(),
-      let currencyToRate = currencyTo?.buyingRate.toDouble(),
-      let currencyFromUnit = currencyFrom?.unitValue,
-      let currencyToUnit = currencyTo?.unitValue
-    else { return }
-    
-    let conversionResult = ((currencyFromRate / currencyToRate) * Double(currencyToUnit)).rounded(toPlaces: 6)
-    let resultString = "\(currencyFromUnit) \(currencyFromCode) = \(conversionResult) \(currencyToCode)"
-    result = resultString
+    currencies.count
   }
 }
 

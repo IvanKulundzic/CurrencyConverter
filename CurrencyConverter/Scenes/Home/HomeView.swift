@@ -20,7 +20,7 @@ final class HomeView: UIView {
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-    setupView()
+    setupViews()
   }
   
   required init?(coder aDecoder: NSCoder) {
@@ -28,7 +28,7 @@ final class HomeView: UIView {
   }
 }
 
-// MARK: - view properties
+// MARK: - View properties
 /// Exposing view properties in order to update the UI based on viewModel data
 extension HomeView {
   var result: String? {
@@ -47,8 +47,8 @@ extension HomeView {
 // MARK: - setup view
 private extension HomeView {
   /// Main setup method that is used as a method caller for all other UI components setup methods
-  func setupView() {
-    backgroundColor = .white
+  func setupViews() {
+    setupView()
     setupTopLabel()
     setupCurrencyFromPicker()
     setupMidLabel()
@@ -56,6 +56,10 @@ private extension HomeView {
     setupResultLabel()
     setupSubmitButton()
     setupActivityIndicator()
+  }
+  
+  func setupView() {
+    backgroundColor = .white
   }
   
   func setupTopLabel() {
@@ -68,7 +72,7 @@ private extension HomeView {
     ]
     NSLayoutConstraint.useAndActivateConstraints(constraints: topLabelConstraints)
     topLabel.backgroundColor = .clear
-    topLabel.text = "Choose a currency to convert FROM"
+    topLabel.text = NSLocalizedString("home_view_currency_from_label", comment: "")
     topLabel.textAlignment = .center
     topLabel.font = UIFont.systemFont(ofSize: 20)
   }
@@ -94,7 +98,7 @@ private extension HomeView {
     ]
     NSLayoutConstraint.useAndActivateConstraints(constraints: midLabelConstraints)
     midLabel.backgroundColor = .clear
-    midLabel.text = "Choose a currency to convert TO"
+    midLabel.text = NSLocalizedString("home_view_currency_to_label", comment: "")
     midLabel.textAlignment = .center
     midLabel.font = UIFont.systemFont(ofSize: 20)
   }

@@ -14,8 +14,8 @@ extension UIButton {
     let button = UIButton()
     /// Button visual setup
     button.backgroundColor = .systemPink
-    button.setTitle("Submit", for: .normal)
-    //button.layer.cornerRadius = button.frame.height / 2
+    let title = NSLocalizedString("home_view_submit_button_title", comment: "")
+    button.setTitle(title, for: .normal)
     /// Add shadow to the button
     button.layer.shadowOffset = .zero
     button.layer.shadowRadius = 5.0

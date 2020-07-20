@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  CurrencyConverter
+
+  Created by Ivan Kulundzic on 15/07/2020.
+  Copyright © 2020 Ivan Kulundzic. All rights reserved.
+*/
+
+"home_view_currency_from_label" = "Choose a currency to convert FROM";
+"home_view_currency_to_label" = "Choose a currency to convert TO";
+"home_view_submit_button_title" = "Submit";
+

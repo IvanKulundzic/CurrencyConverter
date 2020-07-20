@@ -15,12 +15,12 @@ struct Currency: Codable, Equatable {
   let medianRate: String
   let sellingRate: String
   let unitValue: Int
-  
-  enum CodingKeys: String, CodingKey {
-    case buyingRate = "buying_rate"
-    case currencyCode = "currency_code"
-    case medianRate = "median_rate"
-    case sellingRate = "selling_rate"
-    case unitValue = "unit_value"
-  }
+}
+
+class CurrencyCoreData: NSManagedObject {
+  @NSManaged var buyingRate: String
+  @NSManaged var currencyCode: String
+  @NSManaged var medianRate: String
+  @NSManaged var sellingRate: String
+  @NSManaged var unitValue: Int
 }
