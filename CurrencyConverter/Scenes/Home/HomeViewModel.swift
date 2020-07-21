@@ -59,6 +59,8 @@ extension HomeViewModel {
         switch result {
         case .success(let currencies):
           self?.currencies = currencies
+          self?.currencyFrom = currencies[0]
+          self?.currencyTo = currencies[0]
         case .failure(let error):
           print(error.localizedDescription)
         }
