@@ -29,7 +29,6 @@ final class HomeViewModel: NSObject, HomeViewModelProtocol {
   var currencies: [Currency] {
     didSet {
         currenciesChangedHandler?()
-        createPList()
     }
   }
   
@@ -95,23 +94,5 @@ extension HomeViewModel: UIPickerViewDataSource {
   
   func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
     currencies.count
-  }
-}
-
-// MARK: - create plist for testing purposes
-extension HomeViewModel {
-  func createPList() {
-    let encoder = PropertyListEncoder()
-    encoder.outputFormat = .xml
-    let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("Currencies.plist")
-    do {
-      let data = try encoder.encode(currencies)
-      print("2. Data:", data)
-      try data.write(to: path)
-      print("3. Path: \(path)")
-    } catch {
-      print(error)
-    }
-    print(#function)
   }
 }

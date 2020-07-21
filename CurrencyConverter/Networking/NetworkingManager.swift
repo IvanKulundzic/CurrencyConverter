@@ -9,7 +9,7 @@
 import Foundation
 
 final class NetworkingManager {
-  func getApiData<T: Codable>(url: URL, completion: @escaping CompletionHandler<Result<T, Error>>) {
+  func getApiData<T: Codable>(url: URL, completion: @escaping TypedAction<Result<T, Error>>) {
     let request = URLRequest(url: url)
     URLSession.shared.dataTask(with: request) { data, response, error in
       DispatchQueue.main.async {
