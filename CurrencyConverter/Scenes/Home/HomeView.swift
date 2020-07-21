@@ -68,13 +68,13 @@ private extension HomeView {
       topLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
       topLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 10),
       topLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -10),
-      topLabel.heightAnchor.constraint(equalToConstant: 50)
+      topLabel.heightAnchor.constraint(equalToConstant: 40)
     ]
     NSLayoutConstraint.useAndActivateConstraints(constraints: topLabelConstraints)
     topLabel.backgroundColor = .clear
     topLabel.text = NSLocalizedString("home_view_currency_from_label", comment: "")
     topLabel.textAlignment = .center
-    topLabel.font = UIFont.systemFont(ofSize: 20)
+    topLabel.font = UIFont.systemFont(ofSize: 16)
   }
   
   func setupCurrencyFromPicker() {
@@ -83,7 +83,7 @@ private extension HomeView {
       currencyFromPicker.topAnchor.constraint(equalTo: topLabel.bottomAnchor, constant: 1),
       currencyFromPicker.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 30),
       currencyFromPicker.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -30),
-      currencyFromPicker.heightAnchor.constraint(equalToConstant: 200)
+      currencyFromPicker.heightAnchor.constraint(equalToConstant: 150)
     ]
     NSLayoutConstraint.useAndActivateConstraints(constraints: currencyFromPickerConstraints)
   }
@@ -94,13 +94,13 @@ private extension HomeView {
       midLabel.topAnchor.constraint(equalTo: currencyFromPicker.bottomAnchor, constant: 5),
       midLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
       midLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
-      midLabel.heightAnchor.constraint(equalToConstant: 50)
+      midLabel.heightAnchor.constraint(equalToConstant: 40)
     ]
     NSLayoutConstraint.useAndActivateConstraints(constraints: midLabelConstraints)
     midLabel.backgroundColor = .clear
     midLabel.text = NSLocalizedString("home_view_currency_to_label", comment: "")
     midLabel.textAlignment = .center
-    midLabel.font = UIFont.systemFont(ofSize: 20)
+    midLabel.font = UIFont.systemFont(ofSize: 16)
   }
   
   func setupCurrencyToPicker() {
@@ -109,7 +109,7 @@ private extension HomeView {
       currencyToPicker.topAnchor.constraint(equalTo: midLabel.bottomAnchor, constant: 1),
       currencyToPicker.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 30),
       currencyToPicker.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -30),
-      currencyToPicker.heightAnchor.constraint(equalToConstant: 200)
+      currencyToPicker.heightAnchor.constraint(equalToConstant: 150)
     ]
     NSLayoutConstraint.useAndActivateConstraints(constraints: currencyToPickerConstraints)
   }
@@ -120,12 +120,12 @@ private extension HomeView {
       resultLabel.topAnchor.constraint(equalTo: currencyToPicker.bottomAnchor, constant: 10),
       resultLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 30),
       resultLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -30),
-      resultLabel.heightAnchor.constraint(equalToConstant: 100)
+      resultLabel.heightAnchor.constraint(equalToConstant: 60)
     ]
     NSLayoutConstraint.useAndActivateConstraints(constraints: resultLabelConstraints)
     resultLabel.backgroundColor = .clear
     resultLabel.textAlignment = .center
-    resultLabel.font = UIFont.systemFont(ofSize: 25)
+    resultLabel.font = UIFont.systemFont(ofSize: 18)
     
     resultLabel.layer.borderWidth = 1.0
     resultLabel.layer.borderColor = UIColor.systemGray.cgColor
