@@ -83,7 +83,7 @@ private extension HomeView {
       currencyFromPicker.topAnchor.constraint(equalTo: topLabel.bottomAnchor, constant: 1),
       currencyFromPicker.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 30),
       currencyFromPicker.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -30),
-      currencyFromPicker.heightAnchor.constraint(equalToConstant: 150)
+      currencyFromPicker.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.25)
     ]
     NSLayoutConstraint.useAndActivateConstraints(constraints: currencyFromPickerConstraints)
   }
@@ -109,7 +109,7 @@ private extension HomeView {
       currencyToPicker.topAnchor.constraint(equalTo: midLabel.bottomAnchor, constant: 1),
       currencyToPicker.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 30),
       currencyToPicker.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -30),
-      currencyToPicker.heightAnchor.constraint(equalToConstant: 150)
+      currencyToPicker.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.25)
     ]
     NSLayoutConstraint.useAndActivateConstraints(constraints: currencyToPickerConstraints)
   }
@@ -120,7 +120,7 @@ private extension HomeView {
       resultLabel.topAnchor.constraint(equalTo: currencyToPicker.bottomAnchor, constant: 10),
       resultLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 30),
       resultLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -30),
-      resultLabel.heightAnchor.constraint(equalToConstant: 60)
+      resultLabel.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.1)
     ]
     NSLayoutConstraint.useAndActivateConstraints(constraints: resultLabelConstraints)
     resultLabel.backgroundColor = .clear

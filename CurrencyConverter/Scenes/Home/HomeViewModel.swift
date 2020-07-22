@@ -59,6 +59,7 @@ extension HomeViewModel {
         switch result {
         case .success(let currencies):
           self?.currencies = currencies
+          /// Added preselected values for the pickers, so the model can do the conversion even if none are selected
           self?.currencyFrom = currencies[0]
           self?.currencyTo = currencies[0]
         case .failure(let error):

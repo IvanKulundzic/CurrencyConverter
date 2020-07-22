@@ -15,6 +15,7 @@
 		EB328A5C236435A1003AC36E /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB328A5B236435A1003AC36E /* Currency.swift */; };
 		EB328A5E2364893F003AC36E /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB328A5D2364893F003AC36E /* NetworkingManager.swift */; };
 		EB46BB4C24BEE38C004A023B /* Currencies.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB46BB4B24BEE38C004A023B /* Currencies.plist */; };
+		EB7A479024C7753C008839F4 /* EnumAPIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7A478F24C7753C008839F4 /* EnumAPIErrors.swift */; };
 		EB96D52924BF8FA3009845A4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB96D52B24BF8FA3009845A4 /* Localizable.strings */; };
 		EBCDCE2F24BDE7B100CF3F88 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCDCE2E24BDE7B100CF3F88 /* HomeViewModelTests.swift */; };
 		EBE8F69F24B7057B004303F0 /* String-CurrencyConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE8F69E24B7057B004303F0 /* String-CurrencyConverter.swift */; };
@@ -48,6 +49,7 @@
 		EB328A5B236435A1003AC36E /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		EB328A5D2364893F003AC36E /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		EB46BB4B24BEE38C004A023B /* Currencies.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Currencies.plist; sourceTree = "<group>"; };
+		EB7A478F24C7753C008839F4 /* EnumAPIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumAPIErrors.swift; sourceTree = "<group>"; };
 		EB96D52A24BF8FA3009845A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EB96D52C24BF9122009845A4 /* hr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hr; path = hr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EBCDCE2C24BDE7B100CF3F88 /* CurrencyConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +138,7 @@
 			children = (
 				EB328A402364271D003AC36E /* AppDelegate.swift */,
 				EBED006D24B4F8AE001C3FD5 /* TypeAlias.swift */,
+				EB7A478F24C7753C008839F4 /* EnumAPIErrors.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB7A479024C7753C008839F4 /* EnumAPIErrors.swift in Sources */,
 				EBED006E24B4F8AE001C3FD5 /* TypeAlias.swift in Sources */,
 				EBE8F69F24B7057B004303F0 /* String-CurrencyConverter.swift in Sources */,
 				EBED007124B4F937001C3FD5 /* NSLayoutConstraint-CurrencyConverter.swift in Sources */,
